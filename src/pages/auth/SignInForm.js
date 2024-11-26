@@ -25,12 +25,12 @@ function SignInForm() {
                     <Form>
                         <Form.Group controlId="username">
                             <Form.Label className="d-none">Enter Username</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" name="username" />
+                            <Form.Control type="email" placeholder="Enter email" name="username" className={styles.Input}/>
                         </Form.Group>
 
                         <Form.Group controlId="password">
                             <Form.Label className="d-none">Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" name ="password"/>
+                            <Form.Control type="password" placeholder="Password" name ="password" className={styles.Input}/>
                         </Form.Group>
                         <Button 
                         className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
