@@ -3,8 +3,10 @@ import { Container, Navbar, Nav, Form, FormControl, Button  } from 'react-bootst
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
 import  { NavLink } from 'react-router-dom';
+import { useCurrentUser } from '../contexts/CurrentUserContext';
 
 const NavBar = () => {
+    const currentUser = useCurrentUser();
     return (
         <Navbar className={styles.NavBar} expand="md" fixed ="top">
             <Container>
