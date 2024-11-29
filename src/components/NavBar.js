@@ -16,7 +16,7 @@ const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
-  const {expanded, setExpanded, ref} = useClickOutsideToggle
+  const { expanded, setExpanded, ref } = useClickOutsideToggle
 
   const handleSignOut = async () => {
     try {
@@ -59,7 +59,10 @@ const NavBar = () => {
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+        <div className={styles.ProfileSection}>
+          <Avatar src={currentUser?.profile_image} height={40} />
+          <span className={styles.Username}>{currentUser?.username}</span>
+        </div>
       </NavLink>
     </>
   );
